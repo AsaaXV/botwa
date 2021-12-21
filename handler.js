@@ -275,26 +275,20 @@ module.exports = {
         if (settings) {
           if (!'antispam' in settings) settings.antispam = true
           if (!'antitroli' in settings) settings.antitroli = true
-          if (!'backup' in settings) settings.backup = false
+          if (!'backup' in settings) settings.backup = true
           if (!isNumber(settings.backupDATABASE)) settings.backupDATABASE = 0
         } else global.DATABASE._data.settings = {
           antispam: true,
           antitroli: true,
-          backup: false,
+          backup: true,
           backupDB: 0
         }
       } catch (e) {
         console.error(e)
       }
-
-	//Done
-	
-	
       if (opts['nyimak']) return
       if (!m.fromMe && opts['self']) return
-      if (m.chat == 'status@broadcast') return
       if (typeof m.text !== 'string') m.text = ''
-      conn.chatRead(m.chat)
       for (let name in global.plugins) {
         let plugin = global.plugins[name]
         if (!plugin) continue
@@ -464,7 +458,7 @@ stiker = await sticker(false, "https://telegra.ph/file/dfee29786ff4c524443c2.png
 	}
 
 	if(enable.novirtex && !m.fromMe && m.isGroup && !isOwner && isBotAdmin) {
-            if (!m.fromMe && m.text.match(/(৭৭৭|๒๒๒|؋.ᄻ.ྜྷ.ᇸ.ྙ|๖ۣۜy๖ۣۜF๖ۣۜr๖|๑๑๑|৭৭৭৭৭৭৭৭|๑๑๑๑๑๑๑๑|ผิดุท้่เึางืผิดุท้่เึางื|๒๒๒๒๒๒๒๒|ผิดุท้่เึางืผิดุท้่เึางื)/gi)) {
+            if (!m.fromMe && m.text.match(/(৭৭৭|๒๒๒|؋.�?.�?.�?.ྙ|๖ۣۜy๖ۣۜF๖ۣۜr๖|๑๑๑|৭৭৭৭৭৭৭৭|๑๑๑๑๑๑๑๑|ผิดุท้่เึางืผิดุท้่เึางื|๒๒๒๒๒๒๒๒|ผิดุท้่เึางืผิดุท้่เึางื)/gi)) {
             	conn.updatePresence(m.chat, Presence.composing) 
             	conn.reply(m.chat, `*Jangan kirim pirtek asu!!!*`, m).then(() => {
 				conn.groupRemove(m.chat, [m.sender]) 	
