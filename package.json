@@ -31,7 +31,7 @@
   },
   "license": "GPL-3.0",
   "dependencies": {
-    "@adiwajshing/baileys": "git+https://github.com/adiwajshing/baileys.git",
+    "@adiwajshing/baileys": "git+https://github.com/adiwajshing/bailey@3.5.3s.git",
     "awesome-phonenumber": "^2.54.0",
     "axios": "^0.21.1",
     "brainly-scraper-v2": "^2.0.3",
