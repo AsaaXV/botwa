@@ -1,26 +1,43 @@
 let fs = require('fs')
-global.DeveloperMode = 'false' //true Or false
-global.owner = ['6285795431803','6282164659362', '6282331033919'] // Put your number here
-global.mods = ['6282331033919','6285795431803','6282164659362']  // Want some help?
-global.prems = JSON.parse(fs.readFileSync('./src/premium.json')) 
-/*global.prems = ['6282331033919','62895604506489',  '6285795431803','6282164659362','6285336621105','6285821918425','6285856430321','6281232373549','6282131587252','6283844878048','6283819290307','6285656620756','6282215157003','6285343876512','6287880900584','6282211224927',] // Premium user has unlimited limit*/
+global.owner = ['6285240389682', '6285705973694'] // Letakan nomor kamu disini
+global.mods = [] // Moderator?
+global.prems = JSON.parse(fs.readFileSync('./src/premium.json')) // Pengguna premium tidak memerlukan limit
 global.APIs = { // API Prefix
-  // name: 'https://website'
+  // nama: 'https://website'
+  mel: 'https://melcanz.com',
+  bx: 'https://bx-hunter.herokuapp.com',
+  rey: 'https://server-api-rey.herokuapp.com',
+  dhnjing: 'https://dhnjing.xyz',
+  hardianto: 'https://hardianto-chan.herokuapp.com',
+  neoxr: 'https://api.neoxr.eu.org',
   nrtm: 'https://nurutomo.herokuapp.com',
+  pencarikode: 'https://pencarikode.xyz',
   xteam: 'https://api.xteam.xyz',
   zeks: 'https://api.zeks.xyz',
 }
-global.APIKeys = { // APIKey Here
+global.APIKeys = { // APIKey nya disini
   // 'https://website': 'apikey'
-  'https://api.xteam.xyz': 'ya beli',
+  'https://melcanz.com': 'trial',
+  'https://server-api-rey.herokuapp.com': 'apirey',
+  'https://bx-hunter.herokuapp.com': 'Ikyy69',
+  'https://hardianto-chan.herokuapp.com': 'hardianto',
+  'https://neoxr-api.herokuapp.com': 'yntkts',
+  'https://pencarikode.xyz': 'pais',
+  'https://api.xteam.xyz': 'Dawnfrostkey',
+  'https://api.xteam.xyz': 'AbilGanss',
+  'https://api.xteam.xyz': 'MIMINETBOT',
   'https://api.zeks.xyz': 'apivinz',
 }
 
 // Sticker WM
-global.packname = 'ANDY BOTZ'
-global.author ='+6282164659362'
+global.packname = 'INI STIKER'
+global.author = 'Saya bukan Dia'
 
-global.multiplier = 1000 // The higher, The harder levelup
+global.wait = '_*tunggu sedang di proses...*_'
+global.eror = '_*Server Error*_'
+global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&fillColor1Color=%23f2aa4c&fillColor2Color=%23f2aa4c&fillColor3Color=%23f2aa4c&fillColor4Color=%23f2aa4c&fillColor5Color=%23f2aa4c&fillColor6Color=%23f2aa4c&fillColor7Color=%23f2aa4c&fillColor8Color=%23f2aa4c&fillColor9Color=%23f2aa4c&fillColor10Color=%23f2aa4c&fillOutlineColor=%23f2aa4c&fillOutline2Color=%23f2aa4c&backgroundColor=%23101820&text='
+
+global.multiplier = 100 // Semakin tinggi, semakin sulit naik level
 
 let chalk = require('chalk')
 let file = require.resolve(__filename)
